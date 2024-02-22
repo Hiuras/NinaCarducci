@@ -4,9 +4,10 @@
                         <div class="modal-body">
                             ${i?'<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>':'<span style="display:none;" />'}
                             <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
-                            ${i?'<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>':'<span style="display:none;" />'}
+                            ${i?'<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;"><</div>':'<span style="display:none;" />'}
                         </div>
                     </div>
                 </div>
-            </div>')},showItemTags:function(e,t,i){var a='<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';n.each(i,function(e,t){a+=`<li class="nav-item active">
+            </div>')},
+showItemTags:function(e,t,i){var a='<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';n.each(i,function(e,t){a+=`<li class="nav-item active">
                 <span class="nav-link"  data-images-toggle="${t}">${t}</span></li>`});var l=`<ul class="my-4 tags-bar nav nav-pills">${a}</ul>`;"bottom"===t?e.append(l):"top"===t?e.prepend(l):console.error(`Unknown tags position: ${t}`)},filterByTag:function(){if(n(this).hasClass("active-tag"))return;n(".active.active-tag").removeClass("active active-tag"),n(this).addClass("active-tag active");var e=n(this).data("images-toggle");n(".gallery-item").each(function(){n(this).parents(".item-column").hide(),"all"===e?n(this).parents(".item-column").show(300):n(this).data("gallery-tag")===e&&n(this).parents(".item-column").show(300)})}}}(jQuery);
