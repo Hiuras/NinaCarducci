@@ -1,0 +1,24 @@
+{
+    "@context": "http://schema.org",
+    "@type": "PhotographyStudio",
+    "name": "Nina Carducci - Photographe Professionnel en Île-de-France",
+    "description": "Photographe professionnel capturant des moments précieux en Île-de-France. Services de shooting photo, retouches et albums personnalisés.",
+    "url": "https://www.votresite.com",
+    "logo": "https://www.votresite.com/assets/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 rue de la Photographie",
+      "addressLocality": "Paris",
+      "postalCode": "75000",
+      "addressCountry": "France"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33-1-23-45-67-89",
+      "contactType": "customer service"
+    },
+    "openingHours": [
+      "Mo-Sa 09:00-18:00"
+    ]
+  }
+  
